@@ -4,6 +4,7 @@ plugins {
     id("se.patrikerdes.use-latest-versions") version "0.2.19"
     id("com.github.ben-manes.versions") version "0.54.0"
     id("checkstyle")
+    id("org.sonarqube") version "7.3.1.8318"
 }
 
 application {
@@ -26,7 +27,13 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     checkstyle("com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}")
-    checkstyle("group:artifact:version")
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "tikhongrigorevich_java-project-61")
+        property("sonar.organization", "tikhongrigorevich")
+    }
 }
 
 tasks.test {
