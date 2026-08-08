@@ -54,7 +54,8 @@ public class EvenOrOdd {
                 System.out.println("Correct!");
             } else {
                 isGameWon = false;
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + reverseAnswer(userAnswer) + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" +
+                        reverseAnswer(userAnswer) + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }
