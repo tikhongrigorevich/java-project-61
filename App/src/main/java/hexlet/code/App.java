@@ -12,7 +12,6 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String choiceOfUser = scanner.next();
-        
         if (choiceOfUser.equals("1")) {
             Cli.getTalkingToUser();
         } else if (choiceOfUser.equals("2")) {
