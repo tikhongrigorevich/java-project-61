@@ -1,14 +1,14 @@
 plugins {
-    id("java")
-    id("application")
+    java
+    application
     id("se.patrikerdes.use-latest-versions") version "0.2.19"
-    id("com.github.ben-manes.versions") version "0.54.0"
-    id("checkstyle")
-    id("org.sonarqube") version "7.3.1.8318"
+    id("io.github.ben-manes.versions") version "0.61.0"
+    checkstyle
+    id("org.sonarqube") version "7.4.0.8496"
 }
 
 application {
-    mainClass = "hexlet.code.App"
+    mainClass.set("hexlet.code.App")
 }
 
 group = "hexlet-code"
@@ -19,13 +19,13 @@ repositories {
 }
 
 checkstyle {
-    toolVersion = "10.12.4"
+    toolVersion = "10.12.0"
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation(platform("org.junit:junit-bom:6.1.3"))
+    testImplementation("org.junit.jupiter:junit-jupiter:6.1.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.1.3")
     checkstyle("com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}")
 }
 
@@ -40,6 +40,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.getByName("run", JavaExec::class) {
+tasks.getByName<JavaExec>("run") {
     standardInput = System.`in`
 }
