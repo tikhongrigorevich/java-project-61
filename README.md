@@ -19,3 +19,6 @@
 
 Even asciinema:
 [![asciicast](https://asciinema.org/a/1262548.svg)](https://asciinema.org/a/1262548)
+
+Calculator asciinema:
+[![asciicast](https://asciinema.org/a/AuUNdzN2UxSXVCOQ.svg)](https://asciinema.org/a/AuUNdzN2UxSXVCOQ)
