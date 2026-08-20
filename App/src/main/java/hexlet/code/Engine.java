@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine {
 
     public static final int ROUNDS_COUNT = 3;
-    private static final Scanner SCANNER = new Scanner(System.in);
+    public static final Scanner SCANNER = new Scanner(System.in);
     public static int randomInt() {
         return (int) (Math.random() * 100);
     }
