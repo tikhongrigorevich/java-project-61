@@ -22,3 +22,6 @@ Even asciinema:
 
 Calculator asciinema:
 [![asciicast](https://asciinema.org/a/AuUNdzN2UxSXVCOQ.svg)](https://asciinema.org/a/AuUNdzN2UxSXVCOQ)
+
+GCD asciinema:
+[![asciicast](https://asciinema.org/a/fgx3bnDEDLaaBoeR.svg)](https://asciinema.org/a/fgx3bnDEDLaaBoeR)
