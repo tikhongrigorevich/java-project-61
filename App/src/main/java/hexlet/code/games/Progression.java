@@ -12,7 +12,7 @@ public class Progression {
     private static String getProgression() {
         int start = Engine.randomInt();
         int step = progressionRandomInt();
-        int missingElement = progressionRandomInt();
+        int missingElement = (int) (Math.random() * 10);
 
         StringBuilder progression = new StringBuilder();
         String separator = "";
