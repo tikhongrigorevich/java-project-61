@@ -25,3 +25,6 @@ Calculator asciinema:
 
 GCD asciinema:
 [![asciicast](https://asciinema.org/a/fgx3bnDEDLaaBoeR.svg)](https://asciinema.org/a/fgx3bnDEDLaaBoeR)
+
+Progression asciinema:
+[![asciicast](https://asciinema.org/a/FjTX4MZLITzTMrnv.svg)](https://asciinema.org/a/FjTX4MZLITzTMrnv)
