@@ -4,13 +4,11 @@ import hexlet.code.Engine;
 
 public class GCD {
     private static int gcd(int a, int b) {
-
         while (b != 0) {
             var temp = b;
             b = a % b;
             a = temp;
         }
-
         return a;
     }
 
