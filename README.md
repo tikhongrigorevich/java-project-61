@@ -28,3 +28,6 @@ GCD asciinema:
 
 Progression asciinema:
 [![asciicast](https://asciinema.org/a/FjTX4MZLITzTMrnv.svg)](https://asciinema.org/a/FjTX4MZLITzTMrnv)
+
+Prime asciinema:
+[![asciicast](https://asciinema.org/a/zJghPOQrSYM1T3ju.svg)](https://asciinema.org/a/zJghPOQrSYM1T3ju)
