@@ -6,11 +6,8 @@ public class Engine {
 
     public static final int ROUNDS_COUNT = 3;
     public static final Scanner SCANNER = new Scanner(System.in);
-    public static int randomInt() {
-        return (int) (Math.random() * 100);
-    }
 
-    public static void run(String description, String[][] result) {
+    public static void run(String description, String[][] game) {
 
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -22,14 +19,14 @@ public class Engine {
 
         for (var i = 0; i < ROUNDS_COUNT; i += 1) {
 
-            System.out.println("Question: " + result[i][0]);
+            System.out.println("Question: " + game[i][0]);
             System.out.print("Your answer: ");
             String userAnswer = SCANNER.nextLine();
 
-            if (!userAnswer.equals(result[i][1])) {
+            if (!userAnswer.equals(game[i][1])) {
                 System.out.println("'" + userAnswer
                         + "' is wrong answer ;(. Correct answer was "
-                        + result[i][1] + ".");
+                        + game[i][1] + ".");
                 System.out.println("Let's try again, " + userName + "!");
                 isGameWon = false;
                 break;

@@ -19,13 +19,14 @@ public class App {
 
         switch (choiceOfUser) {
             case 1 -> Cli.getTalkingToUser();
-            case 2 -> Even.startOfTheGame();
-            case 3 -> Calculator.startOfTheGame();
-            case 4 -> GCD.startOfTheGame();
-            case 5 -> Progression.startOfTheGame();
-            case 6 -> Prime.startOfTheGame();
+            case 2 -> Even.run();
+            case 3 -> Calculator.run();
+            case 4 -> GCD.run();
+            case 5 -> Progression.run();
+            case 6 -> Prime.run();
             case 0 -> SCANNER.close();
-            default -> System.out.println("Invalid choice. Please try again.");
+            default -> System.out.println(choiceOfUser
+                    + " - is invalid choice. Enter the number from 0 to 6. Please try again.");
         }
     }
 }
