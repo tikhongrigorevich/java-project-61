@@ -28,7 +28,7 @@ public class Prime {
     }
 
     public static void run() {
-        String description = "Answer 'yes' if given is prime. Otherwise answer 'no'.";
+        String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         var task = new String[3][2];
         for (var round : task) {
