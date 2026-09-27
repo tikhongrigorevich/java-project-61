@@ -27,7 +27,7 @@ public class Progression {
             } else {
                 progression.append(separator).append(currentElement);
             }
-            separator = ", ";
+            separator = " ";
         }
 
         return new String[] {progression.toString(), answer};
