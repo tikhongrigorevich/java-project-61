@@ -3,6 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
+    private static int randomInt() {
+        return (int) (Math.random() * 100);
+    }
     private static final String YES = "yes";
     private static final String NO = "no";
 
@@ -24,12 +27,12 @@ public class Prime {
         return YES;
     }
 
-    public static void startOfTheGame() {
+    public static void run() {
         String description = "Answer 'yes' if given is prime. Otherwise answer 'no'.";
 
         var task = new String[3][2];
         for (var round : task) {
-            var currentNumber = Engine.randomInt();
+            var currentNumber = randomInt();
             round[0] = Integer.toString(currentNumber);
             round[1] = isPrime(currentNumber);
         }

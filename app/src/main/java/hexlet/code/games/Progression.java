@@ -3,6 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
+    private static int randomInt() {
+        return (int) (Math.random() * 100);
+    }
     private static int progressionRandomInt() {
         return (int) (Math.random() * 11);
     }
@@ -10,7 +13,7 @@ public class Progression {
     private static String missingNumber;
 
     private static String getProgression() {
-        int start = Engine.randomInt();
+        int start = randomInt();
         int step = progressionRandomInt();
         int missingElement = (int) (Math.random() * 10);
 
@@ -31,7 +34,7 @@ public class Progression {
         return progression.toString();
     }
 
-    public static void startOfTheGame() {
+    public static void run() {
         String description = "What number is missing in the progression?";
 
         var task = new String[3][2];
