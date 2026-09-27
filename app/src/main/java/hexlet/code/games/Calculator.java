@@ -4,32 +4,36 @@ import hexlet.code.Engine;
 
 public class Calculator {
     private static final String[] OPERATORS = {"+", "-", "*"};
+    private static int randomInt() {
+        return (int) (Math.random() * 100);
+    }
 
-    public static String getRandomOperator() {
+    private static String getRandomOperator() {
         int index = (int) (Math.random() * OPERATORS.length);
         return OPERATORS[index];
     }
 
-    public static void startOfTheGame() {
+    private static int getResultOfExpression(String operator, int operand1, int operand2) {
+        return switch (operator) {
+            case "+" -> operand1 + operand2;
+            case "-" -> operand1 - operand2;
+            case "*" -> operand1 * operand2;
+            default -> throw new IllegalStateException("Unexpected value: " + operator);
+        };
+    }
+
+    public static void run() {
         String description = "What is the result of the expression?";
 
         var task = new String[3][2];
         for (var round : task) {
 
-            var operand1 = Engine.randomInt();
-            var operand2 = Engine.randomInt();
+            var operand1 = randomInt();
+            var operand2 = randomInt();
             var operator = getRandomOperator();
 
             round[0] = operand1 + " " + operator + " " + operand2;
-
-            int result = switch (operator) {
-                case "+" -> operand1 + operand2;
-                case "-" -> operand1 - operand2;
-                case "*" -> operand1 * operand2;
-                default -> throw new IllegalStateException("Unexpected value: " + operator);
-            };
-
-            round[1] = Integer.toString(result);
+            round[1] = Integer.toString(getResultOfExpression(operator, operand1, operand2));
         }
 
         Engine.run(description, task);
