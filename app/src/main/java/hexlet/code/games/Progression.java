@@ -12,7 +12,7 @@ public class Progression {
     private static int stepRandomInt() {
         return (int) (Math.random() * 11);
     }
-    private static final List<String> answers = new ArrayList<>();
+    private static final List<String> ANSWERS = new ArrayList<>();
 
     private static String[] getProgression() {
         int start = startRandomInt();
@@ -25,7 +25,7 @@ public class Progression {
             int currentElement = start + (i * step);
             if (i == missingElement) {
                 progression[i] = "..";
-                answers.add(Integer.toString(currentElement));
+                ANSWERS.add(Integer.toString(currentElement));
             } else {
                 progression[i] = Integer.toString(currentElement);
             }
@@ -42,7 +42,7 @@ public class Progression {
         for (var round : task) {
             String progression = String.join(" ", getProgression());
             round[0] = progression;
-            round[1] = answers.get(index);
+            round[1] = ANSWERS.get(index);
             index += 1;
         }
 
