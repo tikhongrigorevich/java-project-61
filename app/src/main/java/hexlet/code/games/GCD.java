@@ -1,11 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import java.util.Random;
 
 public class GCD {
-    private static int randomInt() {
-        return (int) (Math.random() * 100);
-    }
+    private static final Random RANDOM = new Random();
 
     private static int gcd(int a, int b) {
         while (b != 0) {
@@ -22,8 +21,8 @@ public class GCD {
         var task = new String[3][2];
         for (var round : task) {
 
-            int number1 = randomInt();
-            int number2 = randomInt();
+            int number1 = RANDOM.nextInt(100);
+            int number2 = RANDOM.nextInt(100);
 
             round[0] = number1 + " " + number2;
             round[1] = Integer.toString(gcd(number1, number2));

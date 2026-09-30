@@ -1,11 +1,10 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import java.util.Random;
 
 public class Prime {
-    private static int randomInt() {
-        return (int) (Math.random() * 100);
-    }
+    private static final Random RANDOM = new Random();
     private static final String YES = "yes";
     private static final String NO = "no";
 
@@ -32,7 +31,7 @@ public class Prime {
 
         var task = new String[3][2];
         for (var round : task) {
-            var currentNumber = randomInt();
+            var currentNumber = RANDOM.nextInt(100);
             round[0] = Integer.toString(currentNumber);
             round[1] = isPrime(currentNumber);
         }

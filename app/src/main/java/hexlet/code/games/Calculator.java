@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import java.util.Random;
 
 public class Calculator {
     private static final String[] OPERATORS = {"+", "-", "*"};
-    private static int randomInt() {
-        return (int) (Math.random() * 100);
-    }
+    private static final Random RANDOM = new Random();
 
     private static String getRandomOperator() {
         int index = (int) (Math.random() * OPERATORS.length);
@@ -28,8 +27,8 @@ public class Calculator {
         var task = new String[3][2];
         for (var round : task) {
 
-            var operand1 = randomInt();
-            var operand2 = randomInt();
+            var operand1 = RANDOM.nextInt(100);
+            var operand2 = RANDOM.nextInt(100);
             var operator = getRandomOperator();
 
             round[0] = operand1 + " " + operator + " " + operand2;

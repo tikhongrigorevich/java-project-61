@@ -1,23 +1,18 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Progression {
-    private static int startRandomInt() {
-        return (int) (Math.random() * 50);
-    }
-    private static int stepRandomInt() {
-        return (int) (Math.random() * 11);
-    }
+    private static final Random RANDOM = new Random();
     private static final List<String> ANSWERS = new ArrayList<>();
 
     private static String[] getProgression() {
-        int start = startRandomInt();
-        int step = stepRandomInt();
-        int missingElement = (int) (Math.random() * 10);
+        int start = RANDOM.nextInt(50);
+        int step = RANDOM.nextInt(11);
+        int missingElement = RANDOM.nextInt(10);
 
         String[] progression = new String[10];
 
