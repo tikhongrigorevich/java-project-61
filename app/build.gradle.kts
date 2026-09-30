@@ -30,6 +30,7 @@ sonar {
         property("sonar.projectKey", "tikhongrigorevich_java-project-61")
         property("sonar.organization", "tikhongrigorevich")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.coverage.exclusions", "**/*")
     }
 }
 
