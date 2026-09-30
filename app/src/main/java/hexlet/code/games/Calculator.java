@@ -8,7 +8,7 @@ public class Calculator {
     private static final Random RANDOM = new Random();
 
     private static String getRandomOperator() {
-        int index = (int) (Math.random() * OPERATORS.length);
+        int index = RANDOM.nextInt(OPERATORS.length);
         return OPERATORS[index];
     }
 
