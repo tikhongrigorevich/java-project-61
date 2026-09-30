@@ -2,45 +2,48 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Progression {
-    private static int randomInt() {
+    private static int startRandomInt() {
         return (int) (Math.random() * 50);
     }
-    private static int progressionRandomInt() {
+    private static int stepRandomInt() {
         return (int) (Math.random() * 11);
     }
+    private static final List<String> answers = new ArrayList<>();
 
     private static String[] getProgression() {
-        int start = randomInt();
-        int step = progressionRandomInt();
+        int start = startRandomInt();
+        int step = stepRandomInt();
         int missingElement = (int) (Math.random() * 10);
 
-        StringBuilder progression = new StringBuilder();
-        String separator = "";
-        String answer = "";
+        String[] progression = new String[10];
 
         for (var i = 0; i < 10; i += 1) {
             int currentElement = start + (i * step);
             if (i == missingElement) {
-                progression.append(separator).append("..");
-                answer = Integer.toString(currentElement);
+                progression[i] = "..";
+                answers.add(Integer.toString(currentElement));
             } else {
-                progression.append(separator).append(currentElement);
+                progression[i] = Integer.toString(currentElement);
             }
-            separator = " ";
         }
 
-        return new String[] {progression.toString(), answer};
+        return progression;
     }
 
     public static void run() {
         String description = "What number is missing in the progression?";
         var task = new String[3][2];
+        int index = 0;
 
         for (var round : task) {
-            String[] progression = getProgression();
-            round[0] = progression[0];
-            round[1] = progression[1];
+            String progression = String.join(" ", getProgression());
+            round[0] = progression;
+            round[1] = answers.get(index);
+            index += 1;
         }
 
         Engine.run(description, task);

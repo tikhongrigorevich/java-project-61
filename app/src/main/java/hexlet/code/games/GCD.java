@@ -7,7 +7,7 @@ public class GCD {
         return (int) (Math.random() * 100);
     }
 
-    private static int getGcd(int a, int b) {
+    private static int Gcd(int a, int b) {
         while (b != 0) {
             var temp = b;
             b = a % b;
@@ -26,7 +26,7 @@ public class GCD {
             int number2 = randomInt();
 
             round[0] = number1 + " " + number2;
-            round[1] = Integer.toString(getGcd(number1, number2));
+            round[1] = Integer.toString(Gcd(number1, number2));
         }
 
         Engine.run(description, task);

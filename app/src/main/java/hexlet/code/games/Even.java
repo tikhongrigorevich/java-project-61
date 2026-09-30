@@ -15,12 +15,7 @@ public class Even {
 
             round[0] = Integer.toString(randomInt());
             int question = Integer.parseInt(round[0]);
-
-            if (question % 2 == 0) {
-                round[1] = "yes";
-            } else {
-                round[1] = "no";
-            }
+            round[1] = (question % 2 == 0 ? "yes" : "no");
         }
 
         Engine.run(description, task);
