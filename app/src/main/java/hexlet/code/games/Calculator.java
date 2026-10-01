@@ -24,7 +24,7 @@ public class Calculator {
     public static void run() {
         String description = "What is the result of the expression?";
 
-        var task = new String[3][2];
+        var task = new String[Engine.ROUNDS_COUNT][2];
         for (var round : task) {
 
             var operand1 = RANDOM.nextInt(100);

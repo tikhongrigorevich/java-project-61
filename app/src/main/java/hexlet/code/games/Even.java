@@ -9,7 +9,7 @@ public class Even {
     public static void run() {
         String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        var task = new String[3][2];
+        var task = new String[Engine.ROUNDS_COUNT][2];
         for (var round : task) {
 
             round[0] = Integer.toString(RANDOM.nextInt(100));

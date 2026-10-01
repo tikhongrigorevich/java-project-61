@@ -22,7 +22,7 @@ public class Progression {
 
     public static void run() {
         String description = "What number is missing in the progression?";
-        var task = new String[3][2];
+        var task = new String[Engine.ROUNDS_COUNT][2];
 
         for (var round : task) {
             int start = RANDOM.nextInt(MAX_START);

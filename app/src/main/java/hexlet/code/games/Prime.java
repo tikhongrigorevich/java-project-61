@@ -5,35 +5,27 @@ import java.util.Random;
 
 public class Prime {
     private static final Random RANDOM = new Random();
-    private static final String YES = "yes";
-    private static final String NO = "no";
 
-    private static String isPrime(int number) {
-        if (number < 2) {
-            return NO;
-        }
-        if (number == 2) {
-            return YES;
-        }
-        if (number % 2 == 0) {
-            return NO;
-        }
+    private static boolean isPrime(int number) {
+        if (number < 2) { return false; }
+        if (number == 2) { return true; }
+        if (number % 2 == 0) { return false; }
         for (var i = 3; i * i <= number; i += 2) {
             if (number % i == 0) {
-                return NO;
+                return false;
             }
         }
-        return YES;
+        return true;
     }
 
     public static void run() {
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        var task = new String[3][2];
+        var task = new String[Engine.ROUNDS_COUNT][2];
         for (var round : task) {
-            var currentNumber = RANDOM.nextInt(100);
+            var currentNumber = RANDOM.nextInt(100) + 2;
             round[0] = Integer.toString(currentNumber);
-            round[1] = isPrime(currentNumber);
+            round[1] = (isPrime(currentNumber) ? "yes" : "no");
         }
 
         Engine.run(description, task);
